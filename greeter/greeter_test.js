@@ -2,6 +2,7 @@
 
 const Greeter = require('./greeter.js')
 
-test('test runner is set up correctly', () => {
-    expect(0).toBe(1);
+test('should return Hello world given world as input', () => {
+    const result =  Greeter.greet('world');
+    expect(result).toBe('Hello world');
 });
