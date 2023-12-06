@@ -24,6 +24,11 @@ describe('Greeter', () => {
         ['11:05', 'Good morning World'],
         ['12:00', 'Good morning World'],
         ['12:01', 'Hello World'],
+        ['17:59', 'Hello World'],
+        ['18:00', 'Good evening World'],
+        ['22:00', 'Good evening World'],
+        ['22:01', 'Hello World'],
+        
       ])('when current time is %s return %s', (currentTime, expected) => {
         const greeter = new Greeter();
         const [hour, minute] = currentTime.split(':');
