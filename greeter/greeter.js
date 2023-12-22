@@ -12,14 +12,14 @@ const isMorning = (date) => {
 
 const isEvening = (date) => {
     return date.getHours() === 22 && date.getMinutes() === 0
-    || date.getHours() >= 18 && date.getHours() < 22;
+        || date.getHours() >= 18 && date.getHours() < 22;
 }
 
 const isNight = (date) => {
     return date.getHours() >= 22 || date.getHours() < 6;
 }
 class Greeter {
-    greet(name, date=new Date()) {
+    greet(name, date = new Date()) {
         if (isMorning(date)) {
             return `Good morning ${formatName(name)}`;
         } else if (isEvening(date)) {
