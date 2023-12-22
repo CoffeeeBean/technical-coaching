@@ -20,14 +20,15 @@ const isNight = (date) => {
 }
 class Greeter {
     greet(name, date = new Date()) {
+        let greeting = 'Hello';
         if (isMorning(date)) {
-            return `Good morning ${formatName(name)}`;
+            greeting = 'Good morning';
         } else if (isEvening(date)) {
-            return `Good evening ${formatName(name)}`;
+            greeting = 'Good evening';
         } else if (isNight(date)) {
-            return `Good night ${formatName(name)}`;
+            greeting = 'Good night';
         }
-        return `Hello ${formatName(name)}`;
+        return `${greeting} ${formatName(name)}`;
     }
 }
 
