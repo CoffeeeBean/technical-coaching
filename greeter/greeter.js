@@ -16,7 +16,7 @@ const isEvening = (date) => {
 }
 
 const isNight = (date) => {
-    return date.getHours() >= 22;
+    return date.getHours() >= 22 || date.getHours() < 6;
 }
 class Greeter {
     greet(name, date=new Date()) {
