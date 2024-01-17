@@ -18,7 +18,11 @@ const isEvening = (date) => {
 const isNight = (date) => {
     return date.getHours() >= 22 || date.getHours() < 6;
 }
+
 class Greeter {
+    constructor(config) {
+        this.config = config;
+    }
     greet(name, date = new Date()) {
         let greeting = 'Hello';
         if (isMorning(date)) {
